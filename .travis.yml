@@ -1,0 +1,7 @@
+dist: xenial
+language: java
+script:
+  - "./go.sh"
+branches:
+  except:
+    - gh-pages
