@@ -1,4 +1,4 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash -eu
 
 if [ ! -f ${HOME}/bin/lein ]; then
   echo "Fetching lein command..."
@@ -10,5 +10,5 @@ else
   echo "Lein already present..."
 fi
 
-lein run | tee actual.txt
+lein run > actual.txt
 diff actual.txt expected.txt
